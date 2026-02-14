@@ -17,4 +17,5 @@ Develop a user-friendly fitness profile form and implement BMI calculation logic
 ## Technologies Used
 - Python
 - Streamlit
-- Hugging Face Spaces
+- Hugging Face Spaces link
+- https://huggingface.co/spaces/kanakkk789/FitPlanAI
