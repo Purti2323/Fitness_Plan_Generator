@@ -38,6 +38,14 @@ if page == "Fitness Form":
         ["Male", "Female"]
     )
 
+    age = st.number_input(
+    "Enter your age", 
+    min_value=10, 
+    max_value=60, 
+    value=25, 
+    step=1
+    )
+    
     height = st.number_input("Height (cm)", min_value=0.0)
 
     weight = st.number_input("Weight (kg)", min_value=0.0)
@@ -57,7 +65,7 @@ if page == "Fitness Form":
         ["Dumbbells", "Yoga Mat", "Resistance Band", "None"]
     )
 
-    if st.button("Save"):
+    if st.button("Submit"):
 
         if name == "" or height == 0 or weight == 0:
 
@@ -68,6 +76,7 @@ if page == "Fitness Form":
             prompt, bmi, bmi_status = build_prompt(
                 name,
                 gender,
+                age,
                 height,
                 weight,
                 goal,
@@ -80,7 +89,7 @@ if page == "Fitness Form":
             st.session_state.bmi_status = bmi_status
             st.session_state.name = name
 
-            st.success("Saved")
+            st.success("Submitted")
 
 # -----------------------------------
 # PAGE 2 BMI RESULT
