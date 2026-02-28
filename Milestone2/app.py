@@ -33,19 +33,13 @@ if page == "Fitness Form":
 
     name = st.text_input("Name")
 
+    age = st.number_input("Age", min_value=1, max_value=100)
+
     gender = st.selectbox(
         "Gender",
         ["Male", "Female"]
     )
 
-    age = st.number_input(
-    "Enter your age", 
-    min_value=10, 
-    max_value=60, 
-    value=25, 
-    step=1
-    )
-    
     height = st.number_input("Height (cm)", min_value=0.0)
 
     weight = st.number_input("Weight (kg)", min_value=0.0)
@@ -88,6 +82,8 @@ if page == "Fitness Form":
             st.session_state.bmi = bmi
             st.session_state.bmi_status = bmi_status
             st.session_state.name = name
+            st.session_state.age = age
+
 
             st.success("Submitted")
 
@@ -104,6 +100,8 @@ elif page == "BMI Result":
     else:
 
         st.write("Name:", st.session_state.name)
+
+        st.write("Age:", st.session_state.age)
 
         st.write("BMI:", round(st.session_state.bmi, 2))
 
