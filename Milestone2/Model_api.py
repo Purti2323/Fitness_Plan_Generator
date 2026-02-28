@@ -15,7 +15,7 @@ def query_model(prompt):
                 {"role": "system", "content": "You are a certified professional fitness trainer."},
                 {"role": "user", "content": prompt}
             ],
-            max_tokens=600,
+            max_tokens=900,
             temperature=0.7
         )
 
