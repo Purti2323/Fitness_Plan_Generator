@@ -22,4 +22,4 @@ def query_model(prompt):
         return response.choices[0].message.content
 
     except Exception as e:
-        return f"Error: {str(e)}"this is model api now write code accordingly
+        return f"Error: {str(e)}
