@@ -1,4 +1,4 @@
-From huggingface_hub import InferenceClient
+from huggingface_hub import InferenceClient
 import os
 
 def query_model(prompt):
