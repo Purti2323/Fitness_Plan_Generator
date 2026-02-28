@@ -13,7 +13,7 @@ def bmi_category(bmi):
         return "Obese"
 
 
-def build_prompt(name, gender, height, weight, goal, fitness_level, equipment):
+def build_prompt(name, age, gender, height, weight, goal, fitness_level, equipment):
 
     bmi = calculate_bmi(weight, height)
     bmi_status = bmi_category(bmi)
@@ -28,6 +28,7 @@ Create a structured 5-day personalized workout plan.
 User Profile:
 - Name: {name}
 - Gender: {gender}
+- Age: {age}
 - Height: {height} cm
 - Weight: {weight} kg
 - BMI: {bmi:.2f} ({bmi_status})
