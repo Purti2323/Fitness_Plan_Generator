@@ -1,0 +1,9 @@
+streamlit
+sib-api-v3-sdk
+pyjwt
+python-dotenv
+huggingface_hub
+bcrypt
+pandas
+requests
+
